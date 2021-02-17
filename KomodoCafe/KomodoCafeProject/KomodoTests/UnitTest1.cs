@@ -28,5 +28,23 @@ namespace KomodoTests
 
             Assert.IsNotNull(itemFromDirectory);
         }
+
+        [TestMethod]
+
+        public void DisplayContents()
+        {
+            Assert.IsNotNull(_repo);
+        }
+
+        [TestMethod]
+
+        public void DeleteMenuItem()
+        {
+            MenuItem itemFromDirectory = _repo.GetMealByNum(1);
+
+            _repo.DeleteContent(itemFromDirectory);
+
+
+        }
     }
 }
