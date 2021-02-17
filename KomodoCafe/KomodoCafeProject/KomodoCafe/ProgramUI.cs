@@ -37,7 +37,7 @@ namespace KomodoCafe
                         CreateNewContent();
                         break;
                     case "3":
-                        // RemoveContent();
+                        RemoveContent();
                         break;
                     case "0":
                         continueToRun = false;
@@ -96,29 +96,34 @@ namespace KomodoCafe
             _repo.AddItemToDirectory(item);
         }
 
-        //private void RemoveContent()
-        //{
-        //    DisplayContent();
-        //    Console.WriteLine("Which meal would you like to delete?");
-        //    int mealNum = int.Parse(Console.ReadLine());
+        private void RemoveContent()
+        {
+            DisplayContent();
+            Console.WriteLine("Which meal would you like to delete?");
+            int mealNum = int.Parse(Console.ReadLine());
 
-        //    bool wasDeleted = _repo.RemoveContent(mealNum);
+            bool wasDeleted = _repo.DeleteContent(mealNum);
 
-        //    if (wasDeleted)
-        //    {
-        //        Console.WriteLine("Menu Item Deleted");
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine("Could not be deleted");
-        //    }
-        //}
+            if (wasDeleted)
+            {
+                Console.WriteLine("menu item deleted");
+            }
+            else
+            {
+                Console.WriteLine("Could not be deleted");
+            }
+        }
 
         private void SeedData()
         {
             MenuItem itemOne = new MenuItem(1, "Spaghetti", "Pasta with sauce", "Pasta, sauce, cheese", 9.99);
             _repo.AddItemToDirectory(itemOne);
-        }
 
+            MenuItem itemTwo = new MenuItem(2, "Burger", "Hamburger with a sesame bun", "Hamburger, pickles, tomato, lettuce, cheese", 7.99);
+            _repo.AddItemToDirectory(itemTwo);
+
+            MenuItem itemThree = new MenuItem(3, "Taco", "Chicken taco", "Flour tortilla, chicken, tomatoes, lettuce, cheese", 10.99);
+            _repo.AddItemToDirectory(itemThree);
+        }
     }
 }

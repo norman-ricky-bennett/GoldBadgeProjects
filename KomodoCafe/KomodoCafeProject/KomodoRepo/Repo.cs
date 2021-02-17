@@ -41,5 +41,11 @@ namespace KomodoRepo
             }
             return null;
         } 
+
+        public bool DeleteContent(int mealNum)
+        {
+            MenuItem itemToDelete = GetMealByNum(mealNum);
+            return _directory.Remove(itemToDelete);
+        }
     }
 }
