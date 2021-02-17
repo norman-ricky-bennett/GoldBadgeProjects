@@ -1,0 +1,6 @@
+C:\Users\Old Ironsides\OneDrive\Desktop\ElevenFifty\GoldChallenges\Claims\ClaimsRepo\bin\Debug\ClaimsRepo.dll
+C:\Users\Old Ironsides\OneDrive\Desktop\ElevenFifty\GoldChallenges\Claims\ClaimsRepo\bin\Debug\ClaimsRepo.pdb
+C:\Users\Old Ironsides\OneDrive\Desktop\ElevenFifty\GoldChallenges\Claims\ClaimsRepo\obj\Debug\ClaimsRepo.csprojAssemblyReference.cache
+C:\Users\Old Ironsides\OneDrive\Desktop\ElevenFifty\GoldChallenges\Claims\ClaimsRepo\obj\Debug\ClaimsRepo.csproj.CoreCompileInputs.cache
+C:\Users\Old Ironsides\OneDrive\Desktop\ElevenFifty\GoldChallenges\Claims\ClaimsRepo\obj\Debug\ClaimsRepo.dll
+C:\Users\Old Ironsides\OneDrive\Desktop\ElevenFifty\GoldChallenges\Claims\ClaimsRepo\obj\Debug\ClaimsRepo.pdb
