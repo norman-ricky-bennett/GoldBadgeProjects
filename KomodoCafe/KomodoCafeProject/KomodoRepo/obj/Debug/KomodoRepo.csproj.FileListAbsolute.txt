@@ -1,0 +1,6 @@
+C:\Users\Old Ironsides\OneDrive\Desktop\ElevenFifty\GoldChallenges\KomodoCafe\KomodoCafeProject\KomodoRepo\bin\Debug\KomodoRepo.dll
+C:\Users\Old Ironsides\OneDrive\Desktop\ElevenFifty\GoldChallenges\KomodoCafe\KomodoCafeProject\KomodoRepo\bin\Debug\KomodoRepo.pdb
+C:\Users\Old Ironsides\OneDrive\Desktop\ElevenFifty\GoldChallenges\KomodoCafe\KomodoCafeProject\KomodoRepo\obj\Debug\KomodoRepo.csprojAssemblyReference.cache
+C:\Users\Old Ironsides\OneDrive\Desktop\ElevenFifty\GoldChallenges\KomodoCafe\KomodoCafeProject\KomodoRepo\obj\Debug\KomodoRepo.csproj.CoreCompileInputs.cache
+C:\Users\Old Ironsides\OneDrive\Desktop\ElevenFifty\GoldChallenges\KomodoCafe\KomodoCafeProject\KomodoRepo\obj\Debug\KomodoRepo.dll
+C:\Users\Old Ironsides\OneDrive\Desktop\ElevenFifty\GoldChallenges\KomodoCafe\KomodoCafeProject\KomodoRepo\obj\Debug\KomodoRepo.pdb

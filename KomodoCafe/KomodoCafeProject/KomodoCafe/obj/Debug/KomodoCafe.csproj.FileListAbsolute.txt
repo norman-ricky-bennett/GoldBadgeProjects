@@ -1,0 +1,10 @@
+C:\Users\Old Ironsides\OneDrive\Desktop\ElevenFifty\GoldChallenges\KomodoCafe\KomodoCafeProject\KomodoCafe\bin\Debug\KomodoCafe.exe.config
+C:\Users\Old Ironsides\OneDrive\Desktop\ElevenFifty\GoldChallenges\KomodoCafe\KomodoCafeProject\KomodoCafe\bin\Debug\KomodoCafe.exe
+C:\Users\Old Ironsides\OneDrive\Desktop\ElevenFifty\GoldChallenges\KomodoCafe\KomodoCafeProject\KomodoCafe\bin\Debug\KomodoCafe.pdb
+C:\Users\Old Ironsides\OneDrive\Desktop\ElevenFifty\GoldChallenges\KomodoCafe\KomodoCafeProject\KomodoCafe\bin\Debug\KomodoRepo.dll
+C:\Users\Old Ironsides\OneDrive\Desktop\ElevenFifty\GoldChallenges\KomodoCafe\KomodoCafeProject\KomodoCafe\bin\Debug\KomodoRepo.pdb
+C:\Users\Old Ironsides\OneDrive\Desktop\ElevenFifty\GoldChallenges\KomodoCafe\KomodoCafeProject\KomodoCafe\obj\Debug\KomodoCafe.csprojAssemblyReference.cache
+C:\Users\Old Ironsides\OneDrive\Desktop\ElevenFifty\GoldChallenges\KomodoCafe\KomodoCafeProject\KomodoCafe\obj\Debug\KomodoCafe.csproj.CoreCompileInputs.cache
+C:\Users\Old Ironsides\OneDrive\Desktop\ElevenFifty\GoldChallenges\KomodoCafe\KomodoCafeProject\KomodoCafe\obj\Debug\KomodoCafe.csproj.CopyComplete
+C:\Users\Old Ironsides\OneDrive\Desktop\ElevenFifty\GoldChallenges\KomodoCafe\KomodoCafeProject\KomodoCafe\obj\Debug\KomodoCafe.exe
+C:\Users\Old Ironsides\OneDrive\Desktop\ElevenFifty\GoldChallenges\KomodoCafe\KomodoCafeProject\KomodoCafe\obj\Debug\KomodoCafe.pdb

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KomodoRepo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,62 +10,66 @@ namespace KomodoCafe
 {
     class ProgramUI
     {
+        private readonly MenuItem_Repo _repo = new MenuItem_Repo();
         public void Run()
         {
+            SeedData();
+
             bool continueToRun = true;
 
-            while (continueToRun = true)
+            while (continueToRun)
             {
-                Console.WriteLine("Welcome to Komodo Cafe's Virtual Menu!\n" +
+                Console.WriteLine("Welcome to Komodo Cafe's Virtual Menu!\n\n\n" +
                 "Please select an option: \n" +
                 "1. See all menu items \n" +
                 "2. Add new menu item \n" +
                 "3. Delete menu item \n" +
                 "0. Exit program");
-            }
 
-            string userInput = Console.ReadLine();
+                string userInput = Console.ReadLine();
 
-            switch (userInput)
-            {
-                case "1":
-                    ShowAllContent();
-                    break;
-                case "2":
-                    CreateNewContent();
-                    break;
-                case "3":
-                    RemoveContent();
-                    break;
-                case "0":
-                    continueToRun = false;
-                    break;
-                default:
-                    Console.WriteLine("Please make a valid selection.");
-                    Console.ReadLine();
-                    break;
+                switch (userInput)
+                {
+                    case "1":
+                        DisplayContent();
+                        break;
+                    case "2":
+                        CreateNewContent();
+                        break;
+                    case "3":
+                        // RemoveContent();
+                        break;
+                    case "0":
+                        continueToRun = false;
+                        break;
+                    default:
+                        Console.WriteLine("Please make a valid selection.");
+                        Console.ReadLine();
+                        break;
+
+
+                }
             }
         }
-        public void ShowAllContent()
+
+
+
+
+        private void DisplayContent()
         {
             Console.Clear();
 
-            List<MenuItem> listOfMenuItems = _repo.GetContent();
+            List<MenuItem> listOfItems = _repo.GetContents();
 
-            foreach (MenuItem content in listOfMenuItems)
+            foreach (MenuItem item in listOfItems)
             {
-                DisplayContent(content);
-            }
-            Console.ReadKey();
-        }
+                Console.WriteLine($"Meal Number: {item.MealNumber}\n" +
+                    $"Dish: {item.MealName}\n" +
+                    $"Description: {item.MealDescription}\n" +
+                    $"Ingredients: {item.MealIngredients}\n" +
+                    $"Price: {item.MealPrice}");
 
-        private void DisplayContent(MenuItem item)
-        {
-            Console.WriteLine($"Meal Number: {item.MealNumber}\n" +
-                $"Dish: {item.MealName}\n" +
-                $"Description: {item.MealDescription}\n" +
-                $"Ingredients: {item.MealIngredients}\n" +
-                $"Price: {item.MealPrice}");
+            }
         }
 
         private void CreateNewContent()
@@ -74,7 +79,7 @@ namespace KomodoCafe
             MenuItem item = new MenuItem();
 
             Console.WriteLine("Please enter the meal number: ");
-            item.MealNumber = Console.ReadLine();
+            item.MealNumber = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Please enter the meal name: ");
             item.MealName = Console.ReadLine();
@@ -86,15 +91,34 @@ namespace KomodoCafe
             item.MealIngredients = Console.ReadLine();
 
             Console.WriteLine("Please enter the meal price: ");
-            item.MealPrice = Console.ReadLine();
-        
+            item.MealPrice = Convert.ToDouble(Console.ReadLine());
+
+            _repo.AddItemToDirectory(item);
         }
 
-        private void RemoveContent()
-        {
+        //private void RemoveContent()
+        //{
+        //    DisplayContent();
+        //    Console.WriteLine("Which meal would you like to delete?");
+        //    int mealNum = int.Parse(Console.ReadLine());
 
+        //    bool wasDeleted = _repo.RemoveContent(mealNum);
+
+        //    if (wasDeleted)
+        //    {
+        //        Console.WriteLine("Menu Item Deleted");
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Could not be deleted");
+        //    }
+        //}
+
+        private void SeedData()
+        {
+            MenuItem itemOne = new MenuItem(1, "Spaghetti", "Pasta with sauce", "Pasta, sauce, cheese", 9.99);
+            _repo.AddItemToDirectory(itemOne);
         }
 
     }
 }
-   
