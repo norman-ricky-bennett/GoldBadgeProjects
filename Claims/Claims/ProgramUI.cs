@@ -60,14 +60,11 @@ namespace Claims
         {
             Console.Clear();
 
-            Queue<ClaimEntry> queueOfClaims = _repo.GetContents();
+            List<ClaimEntry> allClaims = new List<ClaimEntry>();
 
-            foreach (ClaimEntry entry in queueOfClaims)
-            {
-                queueOfClaims.Enqueue(entry);
-                Console.WriteLine(claimQueue);
-            }
+            Console.WriteLine(allClaims);
 
+            Console.ReadKey();
         }
 
         public void ViewNextClaim()
@@ -77,7 +74,32 @@ namespace Claims
 
         public void CreateNewClaim()
         {
+            Console.Clear();
 
+            ClaimEntry entry = new ClaimEntry();
+
+            Console.WriteLine("Please enter claim number: ");
+            entry.ClaimID = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Please enter the claim type: ");
+            entry.ClaimType = Console.ReadLine();
+
+            Console.WriteLine("Please enter a brief description of this claim: ");
+            entry.ClaimDescription = Console.ReadLine();
+
+            Console.WriteLine("Please enter claim amount: ");
+            entry.ClaimAmount = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Please enter date of incident: ");
+            entry.DateOfIncident = Convert.ToDateTime(Console.ReadLine());
+
+            Console.WriteLine("Please enter date claim was filed: ");
+            entry.DateOfClaim = Convert.ToDateTime(Console.ReadLine());
+
+            Console.WriteLine("This is a valid claim: ");
+            entry.IsValid = Convert.ToBoolean(Console.ReadLine());
+
+            _repo.AddItemToDirectory(entry);
         }
 
 
