@@ -14,11 +14,11 @@ namespace Badge
 
             while (continueToRun)
             {
-                Console.WriteLine("Welcome to Komodo Cafe's Virtual Menu!\n\n\n" +
+                Console.WriteLine("Hello Security Admin. What would you like to do?\n\n\n" +
                 "Please select an option: \n" +
-                "1. See all menu items \n" +
-                "2. Add new menu item \n" +
-                "3. Delete menu item \n" +
+                "1. Add a badge \n" +
+                "2. Edit a badge \n" +
+                "3. List all badges \n" +
                 "0. Exit program");
 
                 string userInput = Console.ReadLine();
@@ -26,13 +26,13 @@ namespace Badge
                 switch (userInput)
                 {
                     case "1":
-                        DisplayContent();
+                        CreateBadge();
                         break;
                     case "2":
-                        CreateNewContent();
+                        UpdateBadge();
                         break;
                     case "3":
-                        RemoveContent();
+                        ListBadges();
                         break;
                     case "0":
                         continueToRun = false;
@@ -43,5 +43,21 @@ namespace Badge
                         break;
                 }
             }
+        }
+
+        public void CreateBadge()
+        {
+
+        }
+
+        public void UpdateBadge()
+        {
+
+        }
+
+        public void ListBadges()
+        {
+
+        }
     }
 }

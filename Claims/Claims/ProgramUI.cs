@@ -60,10 +60,19 @@ namespace Claims
         {
             Console.Clear();
 
-            List<ClaimEntry> allClaims = new List<ClaimEntry>();
+            Queue<ClaimEntry> allClaims = _repo.GetContents();
 
-            Console.WriteLine(allClaims);
-
+            Console.WriteLine("ClaimID\t\t", "Type\t", "Description\t", "Amount\t", "DateOFAccident\t", "DateOfClaim\t", "IsValid\t");
+            foreach(ClaimEntry entry in allClaims)
+            {
+                Console.WriteLine($"{entry.ClaimID}\t\t" +
+                    $"{entry.ClaimType}\t" +
+                    $"{entry.ClaimDescription}\t" +
+                    $"{entry.ClaimAmount}\t" +
+                    $"{entry.DateOfIncident}\t" +
+                    $"{entry.DateOfClaim}\t" +
+                    $"{entry.IsValid}");
+            }
             Console.ReadKey();
         }
 
@@ -106,7 +115,7 @@ namespace Claims
 
         private void SeedData()
         {
-            ClaimEntry entryOne = new ClaimEntry(1, "Auto", "Single vehicle accident", 234.76, new DateTime(2020, 12, 20), new DateTime(2020, 12, 25), true);
+            ClaimEntry entryOne = new ClaimEntry(1, "Auto", "Accident", 234.76, new DateTime(2020, 12, 20), new DateTime(2020, 12, 25), true);
             _repo.AddItemToDirectory(entryOne);
 
             ClaimEntry entryTwo = new ClaimEntry(2, "Home", "Flooding", 34857.86, new DateTime(2020, 10, 03), new DateTime(2019, 02, 11), true);
