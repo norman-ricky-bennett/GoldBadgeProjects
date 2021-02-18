@@ -58,7 +58,7 @@ namespace Badge
 
         public void ListBadges()
         {
-
+            
         }
 
         public void SeedData()

@@ -10,6 +10,11 @@ namespace BadgeRepo
 
     {
         Dictionary<int, List<string>> _listOfBadges = new Dictionary<int, List<string>>();
+
+        public Dictionary<int, List<string>> GetAllBadges()
+        {
+            return _listOfBadges;
+        }
         
     
     }
