@@ -13,7 +13,7 @@ namespace Claims
         public readonly ClaimsEntry_Repo _repo = new ClaimsEntry_Repo();
 
 
-        Queue claimQueue = new Queue();
+        
 
         public bool continueToRun = true;
         public void Run()
@@ -25,19 +25,19 @@ namespace Claims
 
             while (continueToRun)
             {
-            Console.WriteLine("Welcome to Komodo Virtual Claims.\n" +
-                "Please select an option from the menu: \n" +
-                "1. View All Claims\n" +
-                "2. View Next Claim\n" +
-                "3. Delete Existing Claim");
+                Console.WriteLine("Welcome to Komodo Virtual Claims.\n" +
+                    "Please select an option from the menu: \n" +
+                    "1. View All Claims\n" +
+                    "2. View Next Claim\n" +
+                    "3. Enter a New Claim");
 
-            string userInput = Console.ReadLine();
+                string userInput = Console.ReadLine();
 
-            switch (userInput)
-            {
-                case "1":
-                    ViewAllClaims();
-                    break;
+                switch (userInput)
+                {
+                    case "1":
+                        ViewAllClaims();
+                        break;
                     case "2":
                         ViewNextClaim();
                         break;
@@ -45,13 +45,13 @@ namespace Claims
                         CreateNewClaim();
                         break;
                     case "0":
-                    continueToRun = false;
-                    break;
-                default:
-                    Console.WriteLine("Please make a valid selection.");
-                    Console.ReadLine();
-                    break;
-            }
+                        continueToRun = false;
+                        break;
+                    default:
+                        Console.WriteLine("Please make a valid selection.");
+                        Console.ReadLine();
+                        break;
+                }
 
             }
         }
@@ -62,10 +62,10 @@ namespace Claims
 
             Queue<ClaimEntry> allClaims = _repo.GetContents();
 
-            Console.WriteLine("ClaimID\t\t", "Type\t", "Description\t", "Amount\t", "DateOFAccident\t", "DateOfClaim\t", "IsValid\t");
-            foreach(ClaimEntry entry in allClaims)
+            Console.WriteLine("ClaimID\t", "Type\t", "Description\t", "Amount\t", "DateOFAccident\t", "DateOfClaim\t", "IsValid\t");
+            foreach (ClaimEntry entry in allClaims)
             {
-                Console.WriteLine($"{entry.ClaimID}\t\t" +
+                Console.WriteLine($"{entry.ClaimID}\t" +
                     $"{entry.ClaimType}\t" +
                     $"{entry.ClaimDescription}\t" +
                     $"{entry.ClaimAmount}\t" +
@@ -78,7 +78,28 @@ namespace Claims
 
         public void ViewNextClaim()
         {
-            
+            Console.Clear();
+
+            Queue<ClaimEntry> nextClaim = _repo.GetContents();
+
+            Console.WriteLine("Total number of claims: ");
+
+            Console.WriteLine(nextClaim.Count);
+
+            nextClaim.Peek();
+
+            /*foreach (ClaimEntry entry in nextClaim)
+            {
+                Console.WriteLine($"Claim ID: {entry.ClaimID}\n" +
+                    $"Claim Type: {entry.ClaimType}\n" +
+                    $"Claim Description: {entry.ClaimDescription}\n" +
+                    $"Claim Amount: {entry.ClaimAmount}\n" +
+                    $"Date of incident: {entry.DateOfIncident}\n" +
+                    $"Date of Claim: {entry.DateOfClaim}\n" +
+                    $"Valid claim: {entry.IsValid}");
+            }*/
+
+            Console.ReadLine();
         }
 
         public void CreateNewClaim()

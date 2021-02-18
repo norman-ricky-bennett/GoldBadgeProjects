@@ -13,11 +13,10 @@ Challenges completed:
 
 2. Claims
 
-  -Console Application that creates, reads, updates, and deletes
-   insurance claims.  
+  -Console Application that creates and reads insurance claims. 
+   This application utilizes the Queue feature.
 
 3. Badge
 
-  -Console application that creates, reads, updates, and deletes 
-   ID badges. 
+  -Console application that creates ID Badges. This application utlizes the dictionary class.
 
