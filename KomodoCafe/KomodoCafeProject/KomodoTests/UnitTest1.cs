@@ -35,16 +35,17 @@ namespace KomodoTests
         {
             Assert.IsNotNull(_repo);
         }
+    }
 
-        [TestMethod]
+        /*[TestMethod]
 
-        public void DeleteMenuItem()
+        *//*public void DeleteMenuItem()
         {
             MenuItem itemFromDirectory = _repo.GetMealByNum(1);
 
             _repo.DeleteContent(itemFromDirectory);
 
 
-        }
+        }*/
     }
 }

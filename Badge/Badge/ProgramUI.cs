@@ -8,6 +8,7 @@ namespace Badge
 {
     class ProgramUI
     {
+        public Dictionary<int, List<string>> _dict = new Dictionary<int, List<string>>();
         public void Run()
         {
             bool continueToRun = true;
@@ -58,6 +59,11 @@ namespace Badge
         public void ListBadges()
         {
 
+        }
+
+        public void SeedData()
+        {
+            
         }
     }
 }

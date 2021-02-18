@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace BadgeRepo
 {
-    public class Class1
+    public class UserBadge_Repo
+
     {
+        Dictionary<int, List<string>> _listOfBadges = new Dictionary<int, List<string>>();
+        
+    
     }
 }

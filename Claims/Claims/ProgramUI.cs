@@ -88,7 +88,7 @@ namespace Claims
 
             nextClaim.Peek();
 
-            /*foreach (ClaimEntry entry in nextClaim)
+           foreach (ClaimEntry entry in nextClaim)
             {
                 Console.WriteLine($"Claim ID: {entry.ClaimID}\n" +
                     $"Claim Type: {entry.ClaimType}\n" +
@@ -97,7 +97,7 @@ namespace Claims
                     $"Date of incident: {entry.DateOfIncident}\n" +
                     $"Date of Claim: {entry.DateOfClaim}\n" +
                     $"Valid claim: {entry.IsValid}");
-            }*/
+            }
 
             Console.ReadLine();
         }
