@@ -25,6 +25,7 @@ namespace Claims
 
             while (continueToRun)
             {
+                Console.Clear();
                 Console.WriteLine("Welcome to Komodo Virtual Claims.\n" +
                     "Please select an option from the menu: \n" +
                     "1. View All Claims\n" +
@@ -62,7 +63,7 @@ namespace Claims
 
             Queue<ClaimEntry> allClaims = _repo.GetContents();
 
-            Console.WriteLine("ClaimID\t", "Type\t", "Description\t", "Amount\t", "DateOFAccident\t", "DateOfClaim\t", "IsValid\t");
+            Console.WriteLine("ClaimID\t Type\t Description\t Amount\t DateOFAccident\t DateOfClaim\t IsValid\t");
             foreach (ClaimEntry entry in allClaims)
             {
                 Console.WriteLine($"{entry.ClaimID}\t" +
