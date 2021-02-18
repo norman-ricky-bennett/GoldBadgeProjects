@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BadgeRepo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -48,6 +49,8 @@ namespace Badge
 
         public void CreateBadge()
         {
+            Console.WriteLine("Please enter the badge ID number: ");
+            badge
 
         }
 
@@ -63,6 +66,7 @@ namespace Badge
 
         public void SeedData()
         {
+            UserBadge badgeOne = new UserBadge(123, new List<string>());
             
         }
     }

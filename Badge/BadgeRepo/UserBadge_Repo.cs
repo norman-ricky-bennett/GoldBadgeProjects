@@ -15,7 +15,5 @@ namespace BadgeRepo
         {
             return _listOfBadges;
         }
-        
-    
     }
 }
